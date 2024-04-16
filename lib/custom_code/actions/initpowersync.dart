@@ -24,22 +24,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 **************************************************************/
 
-const powersync.Schema schema = powersync.Schema([
-  powersync.Table('lists', [
-    powersync.Column.text('created_at'),
-    powersync.Column.text('name'),
-    powersync.Column.text('owner_id')
-  ]),
-  powersync.Table('todos', [
-    powersync.Column.text('created_at'),
-    powersync.Column.text('completed_at'),
-    powersync.Column.text('description'),
-    powersync.Column.integer('completed'),
-    powersync.Column.text('created_by'),
-    powersync.Column.text('completed_by'),
-    powersync.Column.text('list_id')
-  ])
-]);
+const powersync.Schema schema = PASTE GENERATED SCHEMA HERE
 
 /**************************************************************
                

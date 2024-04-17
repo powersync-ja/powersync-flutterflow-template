@@ -17,6 +17,7 @@ import 'dart:async';
 Future<void> watchLists(
     Future Function(List<ListsRow>? result) callback) async {
   var stream = db.watch('SELECT * FROM lists');
+  listsSubscription?.cancel();
   listsSubscription = stream.listen((data) {
     callback(
         data.map((json) => ListsRow(Map<String, dynamic>.from(json))).toList());

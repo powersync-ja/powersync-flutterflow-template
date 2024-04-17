@@ -13,6 +13,6 @@ import 'package:powersync/powersync.dart' as powersync;
 import '/custom_code/actions/initpowersync.dart';
 
 Future signOut() async {
-  listsSubscription.cancel();
+  listsSubscription?.cancel(); //close any open subscriptions
   await db.disconnectAndClear();
 }

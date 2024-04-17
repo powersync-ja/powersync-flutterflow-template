@@ -11,6 +11,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart';
 import 'package:powersync/powersync.dart' as powersync;
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'dart:async';
 
 /**************************************************************
                
@@ -35,6 +36,9 @@ const powersync.Schema schema = PASTE GENERATED SCHEMA HERE
 const PowerSyncEndpoint = FFAppConstants.PowerSyncUrl;
 
 late powersync.PowerSyncDatabase db;
+
+//create one of these for each of your watch() queries
+StreamSubscription listsSubscription = Stream<void>.empty().listen((event) {});
 
 const bool kIsWeb = bool.fromEnvironment('dart.library.js_util');
 
